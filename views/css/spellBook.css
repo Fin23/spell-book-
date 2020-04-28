@@ -1,0 +1,56 @@
+body {
+  background-color: rgb(146, 219, 191);
+  /* background-image: url("../img/background.jpg"); The image used */
+
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+#spellList {
+  border: 1px solid #ddd;
+}
+#spellList li {
+  /* height:100%; */
+  background: #ffe5e5;
+  padding: 5px;
+  margin-left: 35px;
+  list-style-type: decimal;
+  border-bottom: 1px solid #ddd;
+}
+#azmodious {
+  box-shadow: 0 8px 16px 0 #eb69a7, 0 6px 20px 0 rgba(243, 6, 6, 0.979);
+  border: none;
+}
+#azmodious:hover {
+  opacity: 0.5;
+}
+
+.skills ol li {
+  color: black;
+}
+img {
+  height: 550px;
+  width: 350px;
+  float: right;
+  background-color: gray;
+}
+header {
+  text-align: center;
+}
+#spell-book {
+  border-radius: 50%;
+}
+button {
+  margin: 4px;
+}
+.pickedSpell {
+  background-color: #008cba;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
