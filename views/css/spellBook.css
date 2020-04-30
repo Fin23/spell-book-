@@ -10,6 +10,9 @@ body {
 .bodyContainer{
     margin-top:150px;
 }
+.spellBookContainer{
+    padding:25px;
+}
 
 @media (max-width: 993px) {
     .bodyContainer {
@@ -64,7 +67,9 @@ button {
   display: inline-block;
   font-size: 16px;
 }
-
+.tips {
+    padding: 35px;
+}
 
 /* ================== nav bar ====================*/
 
