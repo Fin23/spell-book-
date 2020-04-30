@@ -7,6 +7,16 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
+.bodyContainer{
+    margin-top:150px;
+}
+
+@media (max-width: 993px) {
+    .bodyContainer {
+        margin-top:450px;
+    }
+}
+
 #spellList {
   border: 1px solid #ddd;
 }
@@ -53,4 +63,41 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+
+/* ================== nav bar ====================*/
+
+/*.navbar-dark .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.75);
+    letter-spacing: 1px;
+    font-size: 0.95rem;
+}*/
+
+/*.navbar {
+    background-color: #a4e0a900 !important; /*Dark: 1a1a1a00
+    transition: all .7s;
+    border-radius: 11px;
+     padding-left: 10px; 
+}
+*/
+
+
+.navbar-nav .dropdown-menu {
+    /*position: static;
+    float: none;*/
+    /*background-color: azure;*/
+    background-color: rgba(195, 163, 222, 0.93);
+    /*color: #ffffffee;*/
+}
+
+
+.dropdown-menu {
+    border: 5px solid rgba(224, 85, 85, 0.98) !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #007bff;
+    /*background-color: rgb(146, 219, 191);*/
 }

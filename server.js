@@ -11,11 +11,11 @@ app.use(express.json());
 app.use("/", express.static("views"));
 
 app.get("/spells", function (req, res) {
-  res.sendFile(path.join(__dirname + "/assets/index.html"));
+  res.sendFile(path.join(__dirname + "/views/index.html"));
 });
 
 // server configuration
-const PORT = 8080;
+const PORT = 5000;
 
 // make the server listen to requests
 app.listen(PORT, () => {
