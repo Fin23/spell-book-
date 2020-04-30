@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
-const mongoose = require("mongoose");
-const fetch = require("node-fetch");
+// const mongoose = require("mongoose");
+// const fetch = require("node-fetch");
 
 // create new express app and save it as "app"
 const app = express();
