@@ -7,17 +7,17 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
-.bodyContainer{
+/* .bodyContainer{
     margin-top:150px;
-}
-.spellBookContainer{
-    padding:25px;
+} */
+.spellBookContainer {
+  padding: 25px;
 }
 
 @media (max-width: 993px) {
-    .bodyContainer {
-        margin-top:450px;
-    }
+  .bodyContainer {
+    margin-top: 50px;
+  }
 }
 
 #spellList {
@@ -68,7 +68,7 @@ button {
   font-size: 16px;
 }
 .tips {
-    padding: 35px;
+  padding: 35px;
 }
 
 /* ================== nav bar ====================*/
@@ -87,22 +87,21 @@ button {
 }
 */
 
-
 .navbar-nav .dropdown-menu {
-    /*position: static;
+  /*position: static;
     float: none;*/
-    /*background-color: azure;*/
-    background-color: rgba(195, 163, 222, 0.93);
-    /*color: #ffffffee;*/
+  /*background-color: azure;*/
+  background-color: rgba(195, 163, 222, 0.93);
+  /*color: #ffffffee;*/
 }
-
 
 .dropdown-menu {
-    border: 5px solid rgba(224, 85, 85, 0.98) !important;
+  border: 5px solid rgba(224, 85, 85, 0.98) !important;
 }
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #fff;
-    background-color: #007bff;
-    /*background-color: rgb(146, 219, 191);*/
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #007bff;
+  /*background-color: rgb(146, 219, 191);*/
 }

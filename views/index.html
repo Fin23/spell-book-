@@ -11,7 +11,13 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/spellBook.css" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
 
+    <link
+      href="https://fonts.googleapis.com/css?family=Tangerine&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
     <script
       type="text/javascript"
@@ -22,85 +28,33 @@
   </head>
 
   <body>
-    <!-- 
+    <nav>
+      <div class="logo">
+        <span>The Vagabond's Almanac to DND</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="./html/conditions.html">
+            conditions
+          </a>
+        </li>
+        <li>
+          <a href="#">About </a>
+        </li>
+        <li>
+          <a href="#">Work </a>
+        </li>
+        <li>
+          <a href="./html/marketPlace.html">Market Place </a>
+        </li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
 
-    <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light col-xl-8 col-md-9 col-sm-10 col-11 mt-2 mx-auto fixed-top" id="mnav">
-            <a class="text-black navbar-brand smooth-scroll" href="#">
-
-             
-
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#da-navbarNav" aria-controls="da-navbarNav" aria-expanded="false" aria-label="Toggle navigation" id="navToggler">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="da-navbarNav">
-                    <div class="col-12 col-lg-11 col-xl-10 text-uppercase mt-3 mt-lg-0 mr-lg-0 ml-lg-auto">
-
-                        <ul class="navbar-nav nav-pills nav-fill ml-auto align-items-center">
-                            <li class="nav-item my-lg-auto">
-                              
-                                <a class="nav-link ns-sec-link smooth-scroll px-2 py-1 mb-3 my-lg-auto ml-lg-1 active" id="nav-begin" href="#">
-                                    Home
-                                </a>
-                            </li>
-
-                            <li class="nav-item my-lg-auto">
-                                <a class="nav-link ns-sec-link smooth-scroll px-2 py-1 mb-3 my-lg-auto ml-lg-1" id="nav-about" href="#">
-                                    stuff 1
-                                </a>
-                            </li>
-
-                            <li class="nav-item my-lg-auto">
-                                <a class="nav-link ns-sec-link smooth-scroll px-2 py-1 mb-3 my-lg-auto ml-lg-1" id="nav-services" href="#">
-                                    stuff 2
-                                </a>
-                            </li>
-
-                            <li class="nav-item my-lg-auto">
-                                <div class="btn-group">
-                                    <a class="nav-link dropdown-toggle py-1 mb-3 my-lg-auto px-2 px-lg-none ns-sec-link" data-toggle="dropdown" id="nav-breakdown" href="#">
-                                        stuff 3 / drop down
-                                    </a>
-
-                                    <div class="dropdown-menu dropdown-menu-right text-center ns-nav-dropdown">
-                                        <a class="dropdown-header h6 font-weight-light text-muted smooth-scroll" href="#">
-                                            drop down item 1
-                                        </a>
-                                        <div class="dropdown-divider" type="button">
-
-                                        </div>
-
-                                        <a class="dropdown-item text-secondary" href="#">
-                                            Drop Down 2
-                                        </a>
-
-                                        <a class="dropdown-item text-secondary" href="#">
-                                            Drop Down 3
-                                        </a>
-
-                                        <a class="dropdown-item text-secondary" href="#">
-                                            DD 4
-                                        </a>
-                                        <a class="dropdown-item text-secondary" href="#">
-                                            DD 5
-                                        </a>
-                                        <a class="dropdown-item text-secondary" href="#">
-                                            DD 6
-                                        </a>
-                                    
-                                    </div>
-                                </div>
-                            </li>
-
-                      
-                        </ul>
-                    </div>
-                </div>
-        </nav>
-    
-    </div> -->
     <div class="bodyContainer">
       <div class="spellBookContainer">
         <h1>
@@ -184,6 +138,12 @@
 
       <div class="tips">
         <h2>
+          Initiative
+        </h2>
+        <span>
+          Dexterity Check + modifier
+        </span>
+        <h2>
           Actions you can take instead of attacking or moving:
         </h2>
         <span>
@@ -224,7 +184,9 @@
           Spell casting attack rolls:
         </h2>
         <span>
-          d20 + spellcasting ability modifier + profieciency bonus
+          d20 + spell-casting ability modifier + proficiency bonus (Wizard-Int
+          || Clerics, Druids, Rangers-Wis || Bards, Paladins, Sorcerers,
+          Warlocks-Char)
         </span>
 
         <h2>
@@ -277,5 +239,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="javascript/spellBook.js"></script>
+    <script src="javascript/nav.js"></script>
   </body>
 </html>

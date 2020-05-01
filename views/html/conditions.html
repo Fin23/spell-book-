@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-          crossorigin="anonymous" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="css/spellBook.css" />
 
     <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script>
-    <script type="text/javascript"
-            src="../extras/jquery-ui-1.8.20.custom.min.js"></script>
+    <script
+      type="text/javascript"
+      src="../extras/jquery-ui-1.8.20.custom.min.js"
+    ></script>
 
     <title>Conditions</title>
-</head>
+  </head>
 
-
-
-
-<body>
-
-
-
-
-
+  <body>
     <h1>Conditions</h1>
-
-
+    <div>
+      <b> Death Saving Throw</b>: roll a flat d20 no modifier, three rolls above
+      10 stabilizes, three rolls under 10 you die, roll a 1 counts as 2 fails,
+      roll 20 automatically alive with 1 hp, damage past 0 that equals your full
+      health auto death, party member can administer first aid to stabilize must
+      roll DC 10 or hirer Wisdom / Medicine check + modifier, if stabilized you
+      remain at 0 hp and stay unconscious but no longer need to roll death
+      saving throws
+    </div>
+    <div>
+      <b> Food </b>: Can survive with out food for 3 days + Con Mod, beyond that
+      you become "exhausted"
+    </div>
+    <div>
+      <b> Water</b>: 1 - 2 gallons per day depending on heat, after that must
+      make DC 15 Con saving throw, or become increasingly "exhausted" per day
+      with out water
+    </div>
+    <div>
+      <b>Falling</b>: 1d6 bludgeoning damager per 10ft max 20d6, lands prone
+    </div>
+    <div>
+      <b>Suffocating</b>: can hold breath for 1min + Con mod past that can
+      survive rounds equal to con mod before dying flat out
+    </div>
     <!--====================================================================================-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
 
     <!--<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
 
     <script src="./javascript/conditions.js"></script>
-</body>
+  </body>
 </html>
