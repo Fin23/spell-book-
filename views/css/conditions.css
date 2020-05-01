@@ -1,0 +1,74 @@
+body {
+  background-color: rgb(146, 219, 191);
+  /* background-image: url("../img/background.jpg"); The image used */
+
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.conditions {
+  padding: 20px;
+}
+
+.deathThrows {
+  margin-bottom: 6px;
+}
+.food {
+  margin-bottom: 6px;
+}
+.water {
+  margin-bottom: 6px;
+}
+.falling {
+  margin-bottom: 6px;
+}
+.suffocating {
+  margin-bottom: 6px;
+}
+
+.blinded {
+  margin-bottom: 6px;
+}
+
+.charmed {
+  margin-bottom: 6px;
+}
+.deafened {
+  margin-bottom: 6px;
+}
+.frightened {
+  margin-bottom: 6px;
+}
+.grappled {
+  margin-bottom: 6px;
+}
+.incapacitated {
+  margin-bottom: 6px;
+}
+.invisibl {
+  margin-bottom: 6px;
+  visibility: ;
+}
+.paralyzed {
+  margin-bottom: 6px;
+}
+.petrified {
+  margin-bottom: 6px;
+}
+.poisoned {
+  margin-bottom: 6px;
+}
+.prone {
+  margin-bottom: 6px;
+}
+.restrained {
+  margin-bottom: 6px;
+}
+.stunned {
+  margin-bottom: 6px;
+}
+.unconscious {
+  margin-bottom: 6px;
+}
