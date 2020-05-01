@@ -15,11 +15,16 @@ app.get("/spells", function (req, res) {
 });
 
 // server configuration
-const PORT = 5000;
+// const PORT = 3000;
 
 // make the server listen to requests
+// app.listen(PORT, () => {
+//   console.log(`Being Servered on PORT : http://localhost:${PORT}/`);
+// });
+
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Being Servered on PORT : http://localhost:${PORT}/`);
+  console.log(`Our app is running on port ${PORT}`);
 });
 
 module.exports = app;
