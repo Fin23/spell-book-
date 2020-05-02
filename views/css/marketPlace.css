@@ -1,3 +1,12 @@
+body {
+  background-color: rgb(146, 219, 191);
+  /* background-image: url("../img/background.jpg"); The image used */
+
+  height: 500px; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
 button {
   margin: 4px;
 }
@@ -10,4 +19,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+.marketContainer {
+  padding: 25px;
 }
