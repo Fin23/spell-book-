@@ -15,7 +15,9 @@ fetch(`http://www.dnd5eapi.co/api/equipment/`)
       var equip = equipment[i].index;
 
       equipmentOutPut +=
-        "<button class='pickedEquipment'>" + equip + "</button>";
+        "<button class='pickedEquipment' data-dismiss='modal'>" +
+        equip +
+        "</button>";
     }
     document.getElementById("equipmentList").innerHTML = equipmentOutPut;
     $(".pickedEquipment").click(function () {
@@ -39,13 +41,14 @@ fetch(`http://www.dnd5eapi.co/api/equipment/`)
           //   console.log(response.desc[0]);
           //   console.log(response.desc[1]);
           //   console.log(response.desc[2]);
-
+          let index = response.index;
           let price = response.cost.quantity + response.cost.unit;
-          let weight = response.weight + "lbs";
+          let weight = response.weight + " - lbs";
+
           //   let description1 = response.desc[0];
           //   let description2 = response.desc[1];
           //   let description3 = response.desc[2];
-          //   document.getElementById("fetchData").innerHTML = description1;
+          document.getElementById("fetchData").innerHTML = index;
           //   document.getElementById("fetchData3").innerHTML = description2;
           //   document.getElementById("fetchData4").innerHTML = description3;
 

@@ -25,6 +25,6 @@ but in reality was abandoned by a group of adventurers who had been killed my
 
 
 enemy types - air or earth elemental, zombie camel, Djinni, giant scorpion, jackal-were,
-                mummy, or mummy lord, giant worms 
+                mummy, or mummy lord, giant worms, crocodile, giant spider, hawk, zombie, skeletons, 
 animals: birds, snakes, dung beatles, hyenas, jackals, lions, camels, 
 
