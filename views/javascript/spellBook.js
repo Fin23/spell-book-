@@ -54,7 +54,7 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
     // console.log(spells);
     var spellOutPut = "";
     for (var i = 0; i < spells.length; i++) {
-      // console.log(spells[i].index);
+      console.log(spells[i].index);
 
       spellOutPut +=
         "<button class='pickedSpell' data-dismiss='modal'>" +
