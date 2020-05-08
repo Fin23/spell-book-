@@ -59,13 +59,14 @@ fetch(`http://www.dnd5eapi.co/api/equipment/`)
             let description3 = response.desc[2];
 
             document.getElementById("description1").innerHTML =
-              index + " - " + description1;
+              index + " -<br/> " + description1;
             document.getElementById("description2").innerHTML =
-              index + " - " + description2;
+              index + " -<br/> " + description2;
             document.getElementById("description3").innerHTML =
-              index + " - " + description3;
+              index + " -<br/> " + description3;
           } else if ((response.desc = undefined)) {
-            description1 = "no description";
+            document.getElementById("description1").innerHTML =
+              " no description";
             console.log(response.desc[0]);
           }
         });
