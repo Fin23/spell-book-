@@ -38,22 +38,36 @@ fetch(`http://www.dnd5eapi.co/api/equipment/`)
           console.log(response.cost.quantity, response.cost.unit);
           console.log("pound", response.weight);
           //   console.log(response.cost.unit);
-          //   console.log(response.desc[0]);
+
           //   console.log(response.desc[1]);
           //   console.log(response.desc[2]);
           let index = response.index;
           let price = response.cost.quantity + response.cost.unit;
           let weight = response.weight + " - lbs";
 
-          //   let description1 = response.desc[0];
-          //   let description2 = response.desc[1];
-          //   let description3 = response.desc[2];
-          document.getElementById("fetchData").innerHTML = index;
-          //   document.getElementById("fetchData3").innerHTML = description2;
-          //   document.getElementById("fetchData4").innerHTML = description3;
+          document.getElementById("itemName").innerHTML = index;
+          document.getElementById("itemPrice").innerHTML = price;
+          document.getElementById("itemWeight").innerHTML = weight;
 
-          document.getElementById("fetchData2").innerHTML = price;
-          document.getElementById("fetchData5").innerHTML = weight;
+          if (response) {
+            // console.log(response.desc[0]);
+            // console.log(response.desc[1]);
+            // console.log(response.desc[2]);
+
+            let description1 = response.desc[0];
+            let description2 = response.desc[1];
+            let description3 = response.desc[2];
+
+            document.getElementById("description1").innerHTML =
+              index + " - " + description1;
+            document.getElementById("description2").innerHTML =
+              index + " - " + description2;
+            document.getElementById("description3").innerHTML =
+              index + " - " + description3;
+          } else if ((response.desc = undefined)) {
+            description1 = "no description";
+            console.log(response.desc[0]);
+          }
         });
     });
     //     .then((response) => {});
