@@ -7,6 +7,9 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
+h1 {
+  text-align: center;
+}
 img {
   /* height: 1200px; */
   width: 100%;
@@ -20,4 +23,6 @@ img {
 }
 p {
   padding: 15px;
+  font-size: 18px;
+  font-weight: 700;
 }
