@@ -13,7 +13,7 @@ nav {
   font-family: "Tangerine", cursive;
 }
 #navbar {
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1000;
   /* background-color: #333; */
 }
