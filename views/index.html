@@ -56,41 +56,73 @@
     </nav>
 
     <div class="bodyContainer">
-      <div class="spellBookContainer">
-        <h1>
-          DND 5e Spell Book
-        </h1>
-        <p><b>from whole list: </b><span id="fetchData2"></span></p>
-        <p><b>Index:</b> <span id="fetchData"></span></p>
-        <p><b> Page: </b><span id="fetchData3"></span></p>
-        <p><b> Name: </b><span id="fetchData4"></span></p>
-        <p><b>Level: </b><span id="fetchData5"></span></p>
-        <p><b>Material Needed: </b><span id="fetchData6"></span></p>
-        <p><b>Casting Time: </b><span id="fetchData7"></span></p>
-        <p><b> Duration:</b> <span id="fetchData8"></span></p>
-        <p><b> Concentration: </b><span id="fetchData9"></span></p>
-        <p><b> Spell Range : </b><span id="fetchData10"></span></p>
-        <p><b> Spell Summary: </b><span id="fetchData11"></span></p>
-        <p><b> Higher Level: </b><span id="fetchData12"></span></p>
+      <!--boot strap card -->
+      <h1>
+        Spell Book
+      </h1>
+      <div class="card">
+        <div class="card-header">
+          <p><b>Spell Name:</b> <span id="fetchData"></span></p>
+        </div>
+        <div class="card-body">
+          <!-- <p class="card-text">
+          <b>Price: </b><span id="itemPrice"></span>
+          <br>
+          <p><b>Weight: </b><span id="itemWeight"></span></p>
+        </p> -->
+          <!-- <b> 
+        <span class="card-title">
+          description 1:
+        </span></b>-->
+          <!-- <span id="description1"></span><br>
+          <b>description 2: </b></br><span id="description2"></span><br>
+          <b>description 3:</b> <span id="description3"></span></br> -->
+          <!-- <p><b> Page: </b><span id="fetchData3"></span></p> -->
+          <!-- <p><b> Name: </b><span id="fetchData4"></span></p> -->
+          <p><b>Level: </b><span id="fetchData5"></span></p>
+          <p><b>Material Needed: </b><span id="fetchData6"></span></p>
+          <p><b>Casting Time: </b><span id="fetchData7"></span></p>
+          <p><b> Duration:</b> <span id="fetchData8"></span></p>
+          <p><b> Concentration: </b><span id="fetchData9"></span></p>
+          <p><b> Spell Range : </b><span id="fetchData10"></span></p>
+          <p><b> Spell Summary: </b><span id="fetchData11"></span></p>
+          <p><b> Higher Level: </b><span id="fetchData12"></span></p>
 
-        <h3>Spell Finder</h3>
-        <form class="form" id="spellForm">
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModalLong"
+          >
+            spell List
+          </button>
+          <!-- <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModalLong"
+      >
+        shop List
+      </button> -->
+        </div>
+        <div class="card-footer text-muted"></div>
+      </div>
+      <!--end of boot strap card-->
+
+      <div class="spellBookContainer">
+        <!-- <p><b>from whole list: </b><span id="fetchData2"></span></p> -->
+
+        <!-- <h3>Spell Finder</h3> -->
+        <form hidden class="form" id="spellForm">
           <input type="text" id="spellInput" placeholder="spell-name" />
           <!-- <input type="submit" id="spellSubmit" onclick="spellSearch()" /> -->
         </form>
         <br />
         <!-- <button onclick="spellB()">cast spell</button> -->
         <!-- Button trigger modal -->
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-toggle="modal"
-          data-target="#exampleModalLong"
-        >
-          spell List
-        </button>
       </div>
       <!-- Modal -->
+
       <div
         class="modal fade"
         id="exampleModalLong"
@@ -102,9 +134,9 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLongTitle">
+              <!-- <h5 class="modal-title" id="exampleModalLongTitle">
                 Modal title
-              </h5>
+              </h5> -->
               <button
                 type="button"
                 class="close"
@@ -116,7 +148,7 @@
             </div>
             <div class="modal-body">
               <li id="spellList"></li>
-              ...
+              <!-- ... -->
             </div>
             <div class="modal-footer">
               <button
@@ -126,9 +158,9 @@
               >
                 Close
               </button>
-              <button type="button" class="btn btn-primary">
+              <!-- <button type="button" class="btn btn-primary">
                 Save changes
-              </button>
+              </button> -->
             </div>
           </div>
         </div>

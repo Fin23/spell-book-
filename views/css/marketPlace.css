@@ -1,14 +1,23 @@
 body {
-  background-color: rgb(146, 219, 191);
+  /* background-color: rgb(146, 219, 191); */
   /* background-image: url("../img/background.jpg"); The image used */
 
-  height: 500px; /* You must set a specified height */
+  height: 100%;
+  /* You must set a specified height */
   background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-repeat: repeat; /* Do not repeat the image */
   background-size: cover;
+  background-image: url("../images/cities/Molnar'sCreepyShop.jpg");
 }
 button {
   margin: 4px;
+}
+h1 {
+  font-family: "Tangerine", cursive;
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 900;
 }
 .pickedEquipment {
   background-color: #008cba;
@@ -22,4 +31,31 @@ button {
 }
 .marketContainer {
   padding: 25px;
+}
+.card {
+  /* margin-top: 5%;
+  margin-left: 15%;
+  margin-right: 25%; */
+  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 0.55rem;
+}
+.card-body {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+  border-top: solid firebrick 5px;
+  border-bottom: solid firebrick 5px;
 }

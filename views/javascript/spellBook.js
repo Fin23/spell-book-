@@ -16,8 +16,8 @@ document.getElementById("spellInput").addEventListener("input", function () {
     })
     .then((response) => {
       let IndexJ = response.index;
-      let NameJ = response.name;
-      let PageJ = response.page;
+      // let NameJ = response.name;
+      // let PageJ = response.page;
       let LevelJ = response.level;
       let MaterialJ = response.material;
       let CastingTimeJ = response.casting_time;
@@ -28,9 +28,9 @@ document.getElementById("spellInput").addEventListener("input", function () {
       let HigherLevelJ = response.higher_level;
       console.log(response);
       document.getElementById("fetchData").innerHTML = IndexJ;
-      document.getElementById("fetchData3").innerHTML = PageJ;
+      // document.getElementById("fetchData3").innerHTML = PageJ;
 
-      document.getElementById("fetchData4").innerHTML = NameJ;
+      // document.getElementById("fetchData4").innerHTML = NameJ;
       document.getElementById("fetchData5").innerHTML = LevelJ;
       document.getElementById("fetchData6").innerHTML = MaterialJ;
       document.getElementById("fetchData7").innerHTML = CastingTimeJ;
@@ -54,8 +54,8 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
     // console.log(spells);
     var spellOutPut = "";
     for (var i = 0; i < spells.length; i++) {
-      console.log(spells[i].index);
-
+      // console.log(spells[i].page);
+      // console.log(spells[i]);
       spellOutPut +=
         "<button class='pickedSpell' data-dismiss='modal'>" +
         spells[i].index +
@@ -66,7 +66,7 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
 
     $(".pickedSpell").click(function () {
       var id = $(this).text();
-      console.log(id);
+      // console.log(id);
       var spellInput = document.getElementById("spellInput");
 
       spellInput.value = id;
@@ -82,8 +82,8 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
         })
         .then((response) => {
           let IndexJ = response.index;
-          let NameJ = response.name;
-          let PageJ = response.page;
+          // let NameJ = response.name;
+          // let PageJ = response.page;
           let LevelJ = response.level;
           let MaterialJ = response.material;
           let CastingTimeJ = response.casting_time;
@@ -94,9 +94,9 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
           let HigherLevelJ = response.higher_level;
           // console.log(response);
           document.getElementById("fetchData").innerHTML = IndexJ;
-          document.getElementById("fetchData3").innerHTML = PageJ;
+          // document.getElementById("fetchData3").innerHTML = PageJ;
 
-          document.getElementById("fetchData4").innerHTML = NameJ;
+          // document.getElementById("fetchData4").innerHTML = NameJ;
           document.getElementById("fetchData5").innerHTML = LevelJ;
           document.getElementById("fetchData6").innerHTML = MaterialJ;
           document.getElementById("fetchData7").innerHTML = CastingTimeJ;
