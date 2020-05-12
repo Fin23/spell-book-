@@ -1,74 +1,111 @@
 body {
-  background-color: rgb(146, 219, 191);
   /* background-image: url("../img/background.jpg"); The image used */
 
-  height: 500px; /* You must set a specified height */
+  /* height: 500px;  */
+  /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
+  background-image: url("../images/cities/tallLibrary.jpg");
 }
 
 .conditions {
-  padding: 20px;
+  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  opacity: 0.7;
+  border-radius: 5px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  /* padding: 20px; */
+  font-weight: 900;
+  margin-left: 15%;
+  margin-right: 15%;
 }
-
+h1 {
+  font-family: "Tangerine", cursive;
+  /* color: rgb(161, 54, 54); */
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  font-weight: 900;
+}
 .deathThrows {
+  /* background-color: rgba(146, 219, 191, 0.5); */
   margin-bottom: 6px;
+  padding: 10px;
 }
 .food {
+  /* background-color: rgba(146, 219, 191, 0.5); */
   margin-bottom: 6px;
+  padding: 10px;
 }
 .water {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .falling {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .suffocating {
   margin-bottom: 6px;
+  padding: 10px;
 }
 
 .blinded {
   margin-bottom: 6px;
+  padding: 10px;
 }
 
 .charmed {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .deafened {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .frightened {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .grappled {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .incapacitated {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .invisibl {
   margin-bottom: 6px;
-  visibility: ;
+  padding: 10px;
 }
 .paralyzed {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .petrified {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .poisoned {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .prone {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .restrained {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .stunned {
   margin-bottom: 6px;
+  padding: 10px;
 }
 .unconscious {
   margin-bottom: 6px;
+  padding: 10px;
 }

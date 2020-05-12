@@ -107,11 +107,16 @@ button {
 .tips {
   padding: 35px;
   margin: 5%;
- 
+  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  opacity: 0.7;
+  border-radius: 6px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   /* font-family: "Tangerine", cursive; */
   color: black;
   /* text-align: center; */
-  background-color: rgb(146, 219, 191);
+  /* background-color: rgb(146, 219, 191); */
   /* font-size: 2em; */
   /* font-weight: 700; */
 }
