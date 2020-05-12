@@ -59,3 +59,46 @@ h1 {
   border-top: solid firebrick 5px;
   border-bottom: solid firebrick 5px;
 }
+.modal-content {
+  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+}
+.modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 0rem;
+}
+.close {
+  /* float: right; */
+  float: left;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1;
+  color: black;
+  text-shadow: 0 1px 0 #fff;
+  /* background-color: green; */
+  opacity: 1;
+}
+.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  text-align: center;
+}
