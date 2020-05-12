@@ -57,13 +57,13 @@
 
     <h1>Market Place</h1>
     <div class="marketContainer">
-      <p><b>Name:</b> <span id="itemName"></span></p>
-      <p><b>Price: </b><span id="itemPrice"></span></p>
-      <p><b>Weight: </b><span id="itemWeight"></span></p>
+      <!-- <p><b>Name:</b></span></p> -->
+      <!-- <p><b>Price: </b><span id="itemPrice"></span></p>
+      <p><b>Weight: </b><span id="itemWeight"></span></p> -->
 
-      <p><b>description 1: </b><span id="description1"></span></p>
-      <p><b>description 2: </b><span id="description2"></span></p>
-      <p><b>description 3: </b><span id="description3"></span></p>
+      <!-- <p><b>description 1: </b><span id="description1"></span></p> -->
+      <!-- <p><b>description 2: </b><span id="description2"></span></p>
+      <p><b>description 3: </b><span id="description3"></span></p> -->
 
       <div>
         <form class="form" id="equipmentForm">
@@ -71,14 +71,48 @@
           <!-- <input type="submit" id="spellSubmit" onclick="spellSearch()" /> -->
         </form>
 
-        <button
+        <!--boot strap card -->
+
+        <div class="card text-center">
+          <div class="card-header">
+            Name: <span id="itemName"></span>
+          </div>
+          <div class="card-body">
+            <b> 
+            <span class="card-title">
+              description 1:
+            </span></b>
+              <span id="description1"></span><br>
+              <b>description 2: </b></br><span id="description2"></span><br>
+              <b>description 3:</b> <span id="description3"></span></br>
+            <p class="card-text">
+              <b>Price: </b><span id="itemPrice"></span>
+              <br>
+              <p><b>Weight: </b><span id="itemWeight"></span></p>
+            </p>
+            <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModalLong"
+          >
+            shop List
+          </button>
+          </div>
+          <div class="card-footer text-muted">
+         
+          </div>
+        </div>
+        <!--end of boot strap card-->
+
+        <!-- <button
           type="button"
           class="btn btn-primary"
           data-toggle="modal"
           data-target="#exampleModalLong"
         >
           shop List
-        </button>
+        </button> -->
 
         <!-- Modal -->
         <div
