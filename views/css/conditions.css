@@ -19,7 +19,15 @@ body {
   /* padding: 20px; */
   /* font-weight: 900; */
   margin-left: 15%;
+  /* margin-right: 15%; */
+}
+.scroll-box {
+  height: 400px; /* maximum height of the box, feel free to change this! */
+  overflow-y: scroll;
+  margin-top: 15%;
+  margin-left: 5%;
   margin-right: 15%;
+  /* padding-bottom: 15%; */
 }
 h1 {
   font-family: "Tangerine", cursive;

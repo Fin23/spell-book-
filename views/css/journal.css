@@ -14,31 +14,39 @@ h1 {
   /* height: 1200px; */
   width: 100%;
   height: auto;
-  /* padding: 15px; */
+  padding: 35px;
 
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  background-image: url("../images/cities/blueSkyKingdom.jpg");
-
+  background-image: url("../images/cities/zoomedOutCapitalCity.jpg");
 }
 img {
   /* height: 1200px; */
   width: 100%;
   height: auto;
   /* padding: 15px; */
-
+  /* margin: 2%; */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
   /* background-image: url(../images/cities/RenderedImage.jpg); */
 }
+.scrollBack {
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  opacity: 0.7;
+  color: black;
+}
 p {
-  background-color: rgba(146, 219, 191, 0.5);
+  /* background-color: rgba(146, 219, 191, 0.5); */
   padding: 15px;
   font-size: 18px;
   font-weight: 900;
-  /* opacity: 0.5; */
+  color: black;
+  opacity: 1 !important;
 }
 h1 {
   font-family: "Tangerine", cursive;
@@ -47,3 +55,19 @@ h1 {
   font-size: 5em;
   font-weight: 900;
 }
+
+.scroll-box {
+  height: 400px; /* maximum height of the box, feel free to change this! */
+  overflow-y: scroll;
+  margin-top: 15%;
+  margin-left: 5%;
+  margin-right: 5%;
+  /* padding-bottom: 15%; */
+}
+/* .scroll-box {
+  background: #f4f4f4;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  height: 400px;  maximum height of the box, feel free to change this! 
+  padding: 15px;
+  overflow-y: scroll;
+} */
