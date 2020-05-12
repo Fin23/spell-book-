@@ -12,6 +12,11 @@ nav {
   background-color: #5d4954;
   font-family: "Tangerine", cursive;
 }
+#navbar {
+  overflow: hidden;
+  z-index: 1000;
+  /* background-color: #333; */
+}
 .logo {
   color: rgb(226, 226, 226);
 
@@ -98,4 +103,16 @@ nav {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
 }
