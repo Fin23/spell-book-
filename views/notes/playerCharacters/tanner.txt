@@ -1,0 +1,49 @@
+Drafter table
+1	+2	Protection, Prayer to Orholam
+2	+2	Blackguard Reflexes
+3	+2	Color Adjustment
+4	+2	Blackguard Training
+5	+3	Extra Attack (Two)
+6	+3	Blackguard Training, Mastery
+7	+3	Color Adjustment
+8	+3	Blackguard Training
+9	+4	Fast Drafter (Once), Mastery
+10	+4	Color Adjustment
+11	+4	Extra Attack (Three)
+12	+4	Blackguard Training
+13	+5	Fast Drafter (Twice)
+14	+5	Blackguard Training, Mastery
+15	+5	Color Adjustment
+16	+5	Blackguard Training
+17	+6	Blackguard Reflexes (Two) 
+Fast Drafter (Three), Mastery
+18	+6	Color Adjustment
+19	+6	Blackguard Training
+20	+6	Extra Attack (Four), Mastery
+
+Protection: When a creature you can see attacks a target other than you within 5 feet use your reaction to create a luxin layer to give the attacker disadvantage
+Prayer to Orholam: Once per short/long rest you prat to Orholam and are can use more light without getting lightsickness. Additional drafting points 1d6+Will modifier
+Blackguard Reflexes: Your reflexes allow you to move faster than the average drafter. On your turn take one additional action. Once per short/long rest  
+Blackguard Training: Increate an ability score by 2 or two scores by 1 or take a feat
+Fast Drafter: Reroll a failed saving throw. Must use the new role, costs one luxin point. Long rest.
+Color Adjustment: 
+Roll for a new color. Roll d2. 1 is left side of the spectrum, 2 is right. Color descriptions are below in order (left to right):
+Sub Red: Fire crystals that catch fire immediately when exposed to oxygen
+Emotion: Hot passion and wrath
+Red: A red jelly substance that that is very flammable, a small spark makes it catch fire. 
+Emotion: Anger, lust, drive.
+Orange: A slick and bouncy liquid like rubbery substance. Oily, but not flammable. Smothers flames.
+Emotion: Comprehension and inventiveness
+Yellow: A liquid that burns off in a bright flash when exposed to air. Given time and focus can be drafted and sealed into an incredibly difficult to break hard luxin.
+Emotion: Equilibrium, peace, and acceptance
+Green: Depending on shades it can be more flexible or rigid. Used for armor and non-lethal blunt items. Combined with blue it can make solid flexible structure
+Emotion: Wildness, lust, disregard for authority
+Blue: Solid and smooth. Good for making sharp objects and excellent for weaponry and projectiles that are lethal. Can flake and fall apart
+Emotion: Clarity, logic, order
+Superviolet: Forms weaves and things imperceptible to the normal human eye unless focused to a tight area. Used as a track for other luxin to follow
+Emotion: Pure logic without emotion
+
+================================================
+has been working for the Spoiled Cabbage helping a second story deck for patrons Knows La-penn** and Jon-e who own the spoiled Cabbage
+been there for a bit, working for room and board during dinner was the most perceptive noticing all group members during dinner time. has come from another dimension / plane of existance 
+
