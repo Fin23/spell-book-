@@ -24,8 +24,16 @@ router.post("/", ensureAuth, async (req, res) => {
 router.get("/editMoney/:id", ensureAuth, async (req, res) => {
   try {
     const purse = await Purse.findOne({
+      // _id: req.params.id,
       _id: req.params.id,
     }).lean();
+
+    const purseUser = await Purse.find({
+      // platinum: Number,
+      user: req.user.id,
+      // _id: req.params.id,
+    }).lean();
+
     // const story = await Story.findOne({
     //   _id: req.params.id,
     // }).lean();
@@ -37,11 +45,36 @@ router.get("/editMoney/:id", ensureAuth, async (req, res) => {
       res.redirect("/stories");
     } else {
       res.render("stories/editMoney", {
+        name: req.user.firstName,
         purse,
+        purseUser,
       });
     }
   } catch (error) {
     console.error(error);
+    return res.render("error/500");
+  }
+});
+
+router.put("/:id", ensureAuth, async (req, res) => {
+  try {
+    let purse = await Purse.findById(req.params.id).lean();
+
+    if (!purse) {
+      return res.render("error/404");
+    }
+
+    if (purse.user != req.user.id) {
+      res.redirect("/stories");
+    } else {
+      purse = await Purse.findOneAndUpdate({ _id: req.params.id }, req.body, {
+        new: true,
+        runValidators: true,
+      });
+      res.redirect("/dashboard");
+    }
+  } catch (error) {
+    console.error(err);
     return res.render("error/500");
   }
 });
