@@ -7,7 +7,7 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
-  background-image: url("../images/cities/capitalCityWaterFront.jpg");
+  background-image: url("/images/cities/capitalCityWaterFront.jpg");
 }
 h1 {
   font-family: "Tangerine", cursive;
@@ -21,7 +21,7 @@ h1 {
   /* margin-top: 5%;
   margin-left: 15%;
   margin-right: 15%; */
-  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  background-image: url("/images/battleMaps/scrollBackground.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -45,7 +45,7 @@ h1 {
   border-bottom: solid firebrick 5px;
 }
 .modal-content {
-  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  background-image: url("/images/battleMaps/scrollBackground.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -144,7 +144,7 @@ button {
 .tips {
   padding: 35px;
   margin: 5%;
-  background-image: url("../images/battleMaps/scrollBackground.jpg");
+  background-image: url("/images/battleMaps/scrollBackground.jpg");
   opacity: 0.7;
   border-radius: 6px;
   background-position: center; /* Center the image */

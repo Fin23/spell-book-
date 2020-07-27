@@ -13,7 +13,8 @@ _______________________________________________________
                                   |  possible fights in 1st game |
                                     ----------------------------
 
-enemy types - air or earth elemental, zombie camel, Djinni, giant scorpion, jackal-were,
+enemy types - ai
+r or earth elemental, zombie camel, Djinni, giant scorpion, jackal-were,
                 mummy, or mummy lord, giant worms, crocodile, giant spider, hawk, zombie, skeletons, 
                 purple worm 
 __________________________________________________________________________________
@@ -39,9 +40,9 @@ Desert -
 (side quest)
 small ruins, small encounter - perception check hidden tomb, skeleton comes to life and a giant insect (scorpion)
 Loot -
-    ring of feather falling pg 191 DmG 
+    ring of feather falling pg 191 DmG needs attunement 
     sleight fo hand check to pick up scroll with out disintegrating 
-    scoll of Giant Insect 
+    scroll of Giant Insect 
 
 _______________________________________________________________________________________
 Dungeon -
@@ -53,5 +54,17 @@ Dungeon -
     loot - 25 gold around the room
         common healing potion
         on lamia - Necklace of charm person - two charges  can cast charm person, recharge after long rest 
+        Sun Blade inside dragons mouth
+        Orb of Scrying inside water pool
+        Jade Egg
+
+        Lamia - Speaking with Azmodious in scry pool
+
+        "Yes master, you were right, your spy in Anas's court was able to clear the streets easily for us to get to the artifact with out any issue, also your prisoners are in the hidden dungeon now, we will be shipping them out to you in the next couple of days,I have made arrangements with the  ship captain Gif in Bedlum to transport the slaves to you, I told him we would meet at the "Squids Inn"  I also sent out some of the Jackels just a little bit ago to steal more sacrifices from the surrounding desert tribes 
+        for you. 
+
+        Azmodious - "Good! Good! our plan is coming together and  soon the soul of Ankara herself will be in our possession and once we have that no one will be able to interfere 
+
+        Lamia - it does appear that one of Anas's men followed us to our strong hold but we were able to capture him and he too is currently being kept in the dungeon as well
     __________________________________________________________________________________
  

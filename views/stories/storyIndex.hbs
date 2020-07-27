@@ -1,0 +1,43 @@
+<h1>
+    Party Supplies
+</h1>
+
+<div class="row">
+
+    {{#each stories}}
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                {{!-- user is the stories user and it knows cause we are in the loop the ../user goes up one level to the logged in user --}}
+                {{!-- when parsing html need triple curly brackets--}}
+                {{{editIcon user ../user _id}}}
+                {{!-- todo: editIcon  using handlebars helper--}}
+                <div class="card-content center-align">
+                    <h5>{{title}}</h5>
+                    <p>{{stripTags ( truncate body 150)}}</p>
+                    <br>
+                    <div class="chip">
+                        {{!-- <img src="{{user.image}}" alt="">--}}
+                        <a href="/stories/user/{{user._id}}"> {{user.displayName}} </a>
+                    </div>
+                </div>
+
+                <div class="card-action center-align">
+                    <a href="/stories/{{_id}}" class="btn grey">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+    <p>no stories to display</p>
+    {{/each}}
+</div>
+
+
+
+
+
+
+
+
+<div class="row">

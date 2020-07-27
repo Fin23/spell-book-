@@ -6,7 +6,8 @@ Tie Knot -
     check to escape or untie Knot
 ___________________________________________
 Tools - Xanathars guide - pg 78 - 84
-
+Traps - DMG 121
+Crafting - DMG 129 
 ___________________________________________
 Potions of healing 
 
@@ -15,3 +16,17 @@ Greater Healing - 4d4 + 4
 Superior Healing - 8d4 + 8 
 Supreme Healing - 10d4 + 20 
 ____________________________________________
+
+
+exhaustion
+__________________________________________
+1 - Disadvantage on ability checks
+2 - Speed is halved 
+3 - Disadvantage on attack rolls and saving throws
+4 - Hit Point maximum halved 
+5 - Speed reduced to 0
+6 - Death
+
+hot weather - every hour with out drinking make constitution saving throws  
+                DC starts at 5 increase by 1 for each hour 
+                DMG pg.110 

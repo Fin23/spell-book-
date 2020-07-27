@@ -1,0 +1,41 @@
+<h6>{{name}}'s backpack</h6>
+<h3>Welcome {{name}} </h3>
+<p>here are your dnd stuffs</p>
+
+{{#if stories}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbod>
+        {{#each stories}}
+        <tr>
+            {{!-- using handle bars syntax to print the database info into the html page --}}
+            <td><a href="/stories/{{_id}}">{{title}}</a></td>
+            <td>{{stripTags body}}</td>
+            <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+            <td><span class="dash-status">{{status}}</span></td>
+            <td>
+                <a href="/stories/edit/{{_id}}" class="btn btn-float">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <form action="/stories/{{_id}}" method="POST" id="delete-form">
+                    <input type="hidden" name="_method" value="DELETE">
+                    <button type="submit" class="btn red">
+                        <div class="fas fa-trash"></div>
+                    </button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbod>
+</table>
+{{else}}
+<p>It appears you have nothing in your inventory</p>
+{{/if}}

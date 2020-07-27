@@ -1,0 +1,42 @@
+<h3>Edit an Item to your inventory</h3>
+<div class="row">
+    <form action="/purse/{{purse._id}}" method="POST" class="col s12">
+        <input type="hidden" name="_method" value="PUT">
+
+
+        <div class="row">
+            <div class="input-field">
+                <input type="number" id="platinum" name="platinum" value="{{purse.platinum}}">
+                <label for="platinum">Platinum</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="number" id="gold" name="gold" value="{{purse.gold}}">
+                <label for="gold">Gold</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="number" id="silver" name="silver" value="{{purse.silver}}">
+                <label for="silver">silver</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field">
+                <input type="number" id="copper" name="copper" value="{{purse.copper}}">
+                <label for="copper">copper</label>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>
