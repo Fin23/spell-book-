@@ -1,12 +1,12 @@
 <nav class="grey darken-3">
     <div class="nav-wrapper container">
-        {{#each purse}}
+        {{#with purse}}
         <span class="menuTitle">
             Vagabound's Almanac
         </span>
 
 
-        <a href="purse/editMoney/{{_id}}" id="purseBtn">
+        <a href="/purse/editMoney/{{_id}}" id="purseBtn">
             Purse:
 
             Platinum: {{platinum}} || Gold: {{gold}}
@@ -19,7 +19,7 @@
         {{!-- <span class="brand-logo center"> </span> --}}
         {{else}}
         <a href="/purse/addMoney" class="brand-logo center"> no money
-            {{/each}}
+            {{/with}}
             <a href="#" data-target="mobile-demo" class="sidenav-trigger show-on-large"><i class="fas fa-bars"> </i></a>
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="/stories">Party supplies</a></li>

@@ -44,10 +44,11 @@ router.get("/editMoney/:id", ensureAuth, async (req, res) => {
     if (purse.user != req.user.id) {
       res.redirect("/stories");
     } else {
-      res.render("stories/editMoney", {
+      res.render("editMoney.hbs", {
+        layout: "editMoney",
         name: req.user.firstName,
         purse,
-        purseUser,
+        // purseUser,
       });
     }
   } catch (error) {
