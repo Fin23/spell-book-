@@ -44,7 +44,20 @@ h1 {
   border-top: solid firebrick 5px;
   border-bottom: solid firebrick 5px;
 }
-.modal-content {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+}
+
+.modal-content,
+.modal {
   background-image: url("/images/battleMaps/scrollBackground.jpg");
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -59,8 +72,8 @@ h1 {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  /* border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem; */
   outline: 0;
 }
 .modal-body {
@@ -95,7 +108,7 @@ h1 {
 }
 
 #spellList {
-  border: 1px solid #ddd;
+  /* border: 1px solid #ddd; */
 }
 #spellList li {
   /* height:100%; */
@@ -140,6 +153,7 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  margin: 5px;
 }
 .tips {
   padding: 35px;

@@ -1,13 +1,19 @@
 <nav class="grey darken-3">
     <div class="nav-wrapper container">
         {{#each purse}}
+        <span class="menuTitle">
+            Vagabound's Almanac
+        </span>
+
 
         <a href="/purse/editMoney/{{_id}}" id="purseBtn">
-            Vagabound's Almanac:
+            Purse:
 
-            || Platinum: {{platinum}} || Gold: {{gold}}
+            Platinum: {{platinum}} || Gold: {{gold}}
             || Silver: {{silver}} || copper: {{copper}}
         </a>
+
+
 
 
         {{!-- <span class="brand-logo center"> </span> --}}
@@ -18,11 +24,15 @@
             <ul class="sidenav" id="mobile-demo">
                 <li><a href="/stories">Party supplies</a></li>
                 <li><a href="/dashboard">{{name}}'s Storage</a></li>
-                <li><a href="/auth/logout">Logout</a></li>
+
                 <li><a href="/home">Spells</a></li>
                 <li><a href="/conditions">conditions</a></li>
                 <li><a href="/marketPlace">Bazaar</a></li>
                 <li><a href="/journal">Maps</a></li>
+                <li><a href="/character">Character</a></li>
+                <br>
+                <br>
+                <li><a href="/auth/logout">Logout</a></li>
 
             </ul>
 

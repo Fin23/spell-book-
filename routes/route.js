@@ -77,6 +77,26 @@ router.get("/conditions", ensureAuth, async (req, res) => {
   }
 });
 
+router.get("/character", ensureAuth, async (req, res) => {
+  try {
+    const stories = await Story.find({
+      user: req.user.id,
+    }).lean();
+    const purse = await Purse.find({
+      user: req.user.id,
+    }).lean();
+    res.render("character.hbs", {
+      layout: "character",
+      name: req.user.firstName,
+      stories,
+      purse,
+    });
+  } catch (err) {
+    console.log(err);
+    res.render("error/500");
+  }
+});
+
 router.get("/marketPlace", ensureAuth, async (req, res) => {
   try {
     const stories = await Story.find({

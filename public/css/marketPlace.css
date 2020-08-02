@@ -102,3 +102,18 @@ h1 {
   border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   text-align: center;
 }
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: #fafafa;
+  padding: 0;
+  max-height: 80% !important;
+  width: 95% !important;
+  margin: auto;
+  overflow-y: auto;
+  border-radius: 2px;
+  will-change: top, opacity;
+  z-index: 1000 !important;
+}

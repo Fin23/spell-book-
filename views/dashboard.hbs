@@ -17,7 +17,7 @@
         {{#each stories}}
         <tr>
             {{!-- using handle bars syntax to print the database info into the html page --}}
-            <td><a href="/stories/{{_id}}">{{title}}</a></td>
+            <td><a href="/stories/{{_id}}" class="myItemName">{{title}}</a></td>
             <td>{{stripTags body}}</td>
             <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
             <td><span class="dash-status">{{status}}</span></td>

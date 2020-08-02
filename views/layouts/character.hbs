@@ -9,35 +9,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/journal.css">
+    <link rel="stylesheet" href="/css/character.css">
 
-    {{!-- <script type="text/javascript" src="../extras/jquery.min.1.7.js"></script> --}}
+    {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" /> --}}
 
-    {{!-- <script type="text/javascript" src="../extras/jquery-ui-1.8.20.custom.min.js"></script> --}}
 
-    {{!-- <link rel="stylesheet" type="text/css" href="../../public/css/nav.css" /> --}}
-    {{!-- <link rel="stylesheet" href="/css/style.css"> --}}
 
-    <title>Maps</title>
+    {{!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> --}}
+
+
+    <title>Character</title>
 </head>
 
 <body>
     {{> _header}}
-    {{!-- ============================================================== --}}
-
-
-
-    {{{body}}}
-
-
-
-
+    {{> _add_btn}}
+    <div class="container"> {{{body}}}</div>
 
 
     {{!-- ============================================================== --}}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -49,14 +42,19 @@
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    {{!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> --}}
 
-    {{!-- <script src="/javascript/spellBook.js"></script> --}}
+    <script src="/javascript/character.js"></script>
     {{!-- <script src="javascript/nav.js"></script> --}}
     <script>
         M.Sidenav.init(document.querySelector('.sidenav'))
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems, options);
+        });
     </script>
 </body>
 
