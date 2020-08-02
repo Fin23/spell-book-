@@ -1,34 +1,65 @@
 <title>Shop</title>
 <h1>Market Place</h1>
-<div class="marketContainer">
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
+
+<!-- Modal -->
+
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog " role="document">
+        <div id="modalShopList" class="modal-body" hidden>
             <div class="modal-content">
-                <div class="modal-header">
-                    <!-- <h5 class="modal-title" id="exampleModalLongTitle">
-                  Modal title
-                </h5> -->
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <ol id="equipmentList"></ol>
-                    <!-- ... -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                        Close
-                    </button>
-                    <!-- <button type="button" class="btn btn-primary">
-                  Save changes
-                </button> -->
-                </div>
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                </button>
+
+                <ol id="equipmentList"></ol>
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+            <script>
+                function myFunction() {
+                    document.getElementById("modalShopList").removeAttribute("hidden");
+                }
+                function closeFunction() {
+                    document.getElementById("modalShopList").setAttribute("hidden");
+                } 
+            </script>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+{{!-- <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ol id="equipmentList"></ol>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Close
+                </button>
+
             </div>
         </div>
     </div>
+</div> --}}
+
+
+<div class="marketContainer">
+
     <!-- <p><b>Name:</b></span></p> -->
     <!-- <p><b>Price: </b><span id="itemPrice"></span></p>
       <p><b>Weight: </b><span id="itemWeight"></span></p> -->
@@ -63,7 +94,8 @@
                 <b>description 2: </b></br><span id="description2"></span><br>
                 <b>description 3:</b> <span id="description3"></span></br>
 
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                <button onclick="myFunction()" type="button" class="btn btn-primary" data-toggle="modal"
+                    data-target="#exampleModalLong">
                     shop List
                 </button>
             </div>
@@ -85,3 +117,109 @@
 
     </div>
 </div>
+
+{{!-- <ol id="equipmentList"></ol> --}}
+
+
+<h1>Conditions</h1>
+{{!-- <div class="scroll-box"> --}}
+<div class="conditions">
+    <div class="deathThrows">
+        <b> Death Saving Throw</b>:<br />
+        roll a flat d20 no modifier, three rolls above 10 stabilizes, three
+        rolls under 10 you die, roll a 1 counts as 2 fails, roll 20
+        automatically alive with 1 hp, damage past 0 that equals your full
+        health auto death, party member can administer first aid to stabilize
+        must roll DC 10 or hirer Wisdom / Medicine check + modifier, if
+        stabilized you remain at 0 hp and stay unconscious but no longer need
+        to roll death saving throws
+    </div>
+    <div class="food">
+        <b> Food </b>:<br />
+        Can survive with out food for 3 days + Con Mod, beyond that you become
+        "exhausted"
+    </div>
+    <div class="water">
+        <b> Water</b>:<br />
+        1 - 2 gallons per day depending on heat, after that must make DC 15
+        Con saving throw, or become increasingly "exhausted" per day with out
+        water
+    </div>
+    <div class="falling">
+        <b>Falling</b>: <br />1d6 bludgeoning damager per 10ft max 20d6, lands
+        prone
+    </div>
+    <div class="suffocating">
+        <b>Suffocating</b>: <br />can hold breath for 1min + Con mod past that
+        can survive rounds equal to con mod before dying flat out
+    </div>
+
+    <div class="blinded">
+        <b>Blinded</b> <br />attacks on creature have advantage, blinded has
+        disadvantage, automatically fail ability checks that require sight
+    </div>
+    <div class="charmed">
+        <b>Charmed</b><br />can't target the charmer with attacks, ability's
+        or spells, charmer has advantage against charmed person
+    </div>
+    <div class="deafened">
+        <b>Deafened</b><br />fails any check that requires hearing
+    </div>
+    <div class="frightened">
+        <b>Frightened</b><br />has disadvantage on all checks and attacks if
+        they can see the source of fear, also can not move closer to fear
+        source
+    </div>
+    <div class="grappled"><b>Grappled</b> <br />stuck in place</div>
+    <div class="incapacitated">
+        <b>Incapacitated</b><br />
+        can't take actions or reactions
+    </div>
+    <div class="invisibl">
+        <b>Invisible</b><br />
+        impossible to see without magic aid, considered heavily obscured, can
+        still be heard attacks while invisible have advantage and attacks
+        against an invisible target have disadvantage
+    </div>
+    <div class="paralyzed">
+        <b>Paralyzed</b><br />
+        incapacitated can't move or speak automatically fails STR and DEX
+        saving throws attacking paralyzed target have advantage, attack hits
+        are automatically CRITS if within 5 feet
+    </div>
+    <div class="petrified">
+        <b>Petrified</b><br />
+        creature and NON-magical items it has on person turn to stone, Weight
+        is multiplied by 10, stops aging, creature in incapacitated unaware of
+        surroundings, attacks against creature have advantage, auto fail STR
+        and DEX saving throws, has resistance to all damage (half damage),
+        immune to poison, and disease, if already poisoned or diseased they
+        are paused, not cured
+    </div>
+    <div class="poisoned">
+        <b>Poisoned</b> <br />has disadvantage on attacks and ability checks
+    </div>
+    <div class="prone">
+        <b>Prone</b> <br />can only crawl, until standing up, has disadvantage
+        on attacks, attacks to prone target with-in 5 ft have advantage, if
+        more than five feet away the attacker has disadvantage
+    </div>
+    <div class="restrained">
+        <b>Restrained</b><br />
+        speed becomes 0, disadvantage to DEX saving throw, attacks v
+        restrained creature have advantage and attacks from the restrained
+        creature have disadvantage
+    </div>
+    <div class="stunned">
+        <b>Stunned</b> <br />becomes incapacitated, faltered speech, auto fail
+        STR and DEX saving throws, attacks against creature have advantage
+    </div>
+    <div class="unconscious">
+        <b>Unconscious</b> <br />incapacitated, can't move, speak and is
+        unaware of surroundings, immediately drops what ever it is holding and
+        falls prone, auto fail STR and DEX saving throw, attack rolls against
+        creature have advantage, if hit from creature with in 5 ft it is auto
+        crit
+    </div>
+</div>
+{{!-- </div> --}}

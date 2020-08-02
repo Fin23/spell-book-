@@ -117,3 +117,9 @@ h1 {
   will-change: top, opacity;
   z-index: 1000 !important;
 }
+
+.conditions {
+  background-image: linear-gradient(to right, #32de8a, #779cab);
+  padding: 8px;
+  font-size: 18px;
+}
