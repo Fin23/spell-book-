@@ -1,48 +1,90 @@
-<h2>Character :
-    <form action="*" method="get"><input type="text" value="{{name}}"></form>
-</h2>
+{{!-- <h2>Race :
+    <form  >
+    
+    </form>
+</h2> --}}
+3
+I have a simple form with one text field for testing. I need to have the info the user types in sent to console.log for now. Is this possible and if so what would I write?
+
+<form class="pure-form"> Race =
+
+    <button onclick="myFunction()" data-toggle="modal" type="submit">Look for all races</button>
+</form>
+
+
+
+  <div class="modal-dialog" role="document">
+
+
+      <div id="modalRaceList" class="modal-body" hidden>
+
+        <div class="modal-content">
+
+
+      
+
+          <ol id="raceList"></ol>
+
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <!-- ... -->
+        </div>
+        {{!-- <div class="modal-footer"> --}}
+
+
+        <script>
+          function myFunction() {
+            document.getElementById("modalRaceList").removeAttribute("hidden");
+          }
+        </script>
+
+      </div>
+    </div>
+  </div>
+
 
 <div class="stats">Roll four 6 sided dice and add together the highest three do this for each of the 6 stats
 </div>
 <table>
     <tr>
-        <th>Company</th>
-        <th>Contact</th>
+        <th>Main Stats </th>
+        <th>Sub Stats</th>
 
     </tr>
     <tr>
-        <td>Alfreds Futterkiste</td>
-        <td>Maria Anders</td>
+        <td>Strength</td>
+        <td>Athletics</td>
 
     </tr>
     <tr>
-        <td>Centro comercial Moctezuma</td>
-        <td>Francisco Chang</td>
+        <td>Dexterity </td>
+        <td>Acrobatics, Sleight of Hand, Stealth</td>
 
     </tr>
     <tr>
-        <td>Ernst Handel</td>
-        <td>Roland Mendel</td>
+        <td>Constitution</td>
+        <td> adds to Current Hit Points </td>
 
     </tr>
     <tr>
-        <td>Island Trading</td>
-        <td>Helen Bennett</td>
+        <td>Intelligence</td>
+        <td>Arcana, History, Investigation, Nature, Religion, </td>
 
     </tr>
     <tr>
-        <td>Laughing Bacchus Winecellars</td>
-        <td>Yoshi Tannamuri</td>
+        <td>Wisdom</td>
+        <td>Animal Handling, Insight, Medicine, Perception, Survival</td>
 
     </tr>
     <tr>
-        <td>Magazzini Alimentari Riuniti</td>
-        <td>Giovanni Rovelli</td>
+        <td>Charisma</td>
+        <td>Deception, Intimidation, Performance</td>
 
     </tr>
 </table>
 
-<div class="leve">level</div>
+<div class="level">level</div>
 
 
 <div class="race">race</div>

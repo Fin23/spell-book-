@@ -77,7 +77,7 @@ fetch(`http://www.dnd5eapi.co/api/spells/`)
       fetch(`http://www.dnd5eapi.co/api/spells/${spells}`)
         .then((response) => {
           // console.log("======= response =========");
-          // console.log(response);
+          console.log(response);
           return response.json();
         })
         .then((response) => {

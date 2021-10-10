@@ -8,8 +8,9 @@ terminal command
 _______________
 npm run dev
 ______________
+nodemone npm start 
 
-keep track of gold in top of nav bar,
+ ** keep track of gold in top of nav bar,
 
 when shopping in store buy button that puts a copy into your storage and takes away from gold purse 
 

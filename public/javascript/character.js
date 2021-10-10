@@ -1,99 +1,530 @@
-// {
-//     "_id": "5e10e4790b1bb138c5b3b661",
-//     "index": "dwarf",
-//     "name": "Dwarf",
-//     "speed": 30,
-//     "ability_bonuses": [
-//       {
-//         "name": "CON",
-//         "url": "/api/ability-scores/con",
-//         "bonus": 2
-//       }
-//     ],
-//     "alignment":
-// var instance = M.FormSelect.getInstance(elem);
-// document.addEventListener("DOMContentLoaded", function () {
-//   var elems = document.querySelectorAll("select");
-//   var instances = M.FormSelect.init(elems, options);
-// });
+// input = "dwarf";
 
-fetch(`http://www.dnd5eapi.co/api/races/`)
-  .then((response) => {
-    // console.log("======= response 2 =========");
-    console.log(response);
+// let raceInput = document.getElementById("raceInput");
 
-    return response.json();
-  })
-  .then((response) => {
-    var raceOutPut = "";
-    race = response.results;
+document
+  .querySelector("form.pure-form")
+  .addEventListener("submit", async function (e) {
+    //prevent the normal submission of the form
+    e.preventDefault();
 
-    for (var i = 0; i < race.length; i++) {
-      //   console.log(equipment[i].index);
-      //   console.log(response.results[i]);
-      var races = race[i].index;
-
-      raceOutPut +=
-        "<button class='pickedEquipment' data-dismiss='modal'>" +
-        races +
-        "</button>";
-    }
-    document.getElementById("equipmentList").innerHTML = raceOutPut;
-    $(".pickedEquipment").click(function () {
-      var cost = $(this).text();
-      console.log(cost);
-      var equipmentInput = document.getElementById("equipmentInput");
-      equipmentInput.value = cost;
-      let equipCost = cost;
-
-      fetch(`http://www.dnd5eapi.co/api/equipment/${equipCost}`)
-        .then((response) => {
-          console.log("======= response 2 =========");
-          //   console.log(response);
-          return response.json();
-        })
-        .then((response) => {
-          console.log(response);
-          console.log(response.cost.quantity, response.cost.unit);
-          console.log("pound", response.weight);
-          //   console.log(response.cost.unit);
-
-          //   console.log(response.desc[1]);
-          //   console.log(response.desc[2]);
-          let index = response.index;
-          let price = response.cost.quantity + response.cost.unit;
-          let weight = response.weight + " - lbs";
-
-          document.getElementById("itemName").innerHTML = index;
-          document.getElementById("itemPrice").innerHTML = price;
-          document.getElementById("itemWeight").innerHTML = weight;
-
-          if (response) {
-            // console.log(response.desc[0]);
-            // console.log(response.desc[1]);
-            // console.log(response.desc[2]);
-
-            let description1 = response.desc[0];
-            let description2 = response.desc[1];
-            let description3 = response.desc[2];
-
-            document.getElementById("description1").innerHTML =
-              index + " -<br/> " + description1;
-            document.getElementById("description2").innerHTML =
-              index + " -<br/> " + description2;
-            document.getElementById("description3").innerHTML =
-              index + " -<br/> " + description3;
-          } else if ((response.desc = undefined)) {
-            document.getElementById("description1").innerHTML =
-              " no description";
-            console.log(response.desc[0]);
-          }
-        });
-    });
-    //     .then((response) => {});
-    // });
-  })
-  .catch((error) => {
-    console.log("error!");
-    console.error(error);
+    // console.log(raceInput.value);
+    // await getRaces(raceInput.value);
+    await getRaces();
   });
+
+// getRaces(raceInput);
+
+async function getRaces() {
+  // const response = await fetch(`http://www.dnd5eapi.co/api/races/${input}`);
+
+  const responseAll = await fetch(`http://www.dnd5eapi.co/api/races/`);
+
+  const allResponses = await responseAll.json();
+  const allRaces = allResponses.results;
+  // const race = await response.json();
+
+  // console.log(" races = ", race);
+  console.log("all races ", allRaces.length);
+  let allRacesHtml = "";
+
+  for (let i = 0; i < allRaces.length; i++) {
+    allRacesHtml +=
+      "<button id=" +
+      "'" +
+      i +
+      "'" +
+      " onclick='pickRace(" +
+      i +
+      ")' class='pickedRace' data-dismiss='modal'>" +
+      allRaces[i].index +
+      "</button>";
+    // console.log("individual races =", allRaces[i].index);
+    // console.log("list should = ", allRacesHtml);
+
+    document.getElementById("raceList").innerHTML = allRacesHtml;
+
+    // return allRaces[i];
+  }
+}
+
+async function pickRace(number) {
+  // let raceId;
+  if (number === 0) {
+    let raceId = "dragonborn";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+    console.log("race data ", raceData);
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 1) {
+    let raceId = "dwarf";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+    console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 2) {
+    let raceId = "elf";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 3) {
+    let raceId = "gnome";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 4) {
+    let raceId = "half-elf";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 5) {
+    let raceId = "half-orc";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 6) {
+    let raceId = "halfling";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 7) {
+    let raceId = "human";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+  if (number === 8) {
+    let raceId = "tiefling";
+    console.log("number", number, raceId);
+    const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
+    const raceData = await response.json();
+    // console.log('response', response)
+    //     console.log("race data ", raceData);
+
+    // console.log("race data", JSON.stringify(raceData, null, 2));
+    const index = raceData.index;
+    const name = raceData.name;
+    const speed = raceData.speed;
+    // const abilityBonusesAttribute =
+    //   raceData.ability_bonuses.ability_score.index;
+    // const abilityBonus = raceData.ability_bonuses.bonus;
+    // const numberOfChoices = raceData.ability_bonus_options.choose;
+    // const abilityBonusOptions = raceData.ability_bonus_options.from;
+    const alignmentInfo = raceData.alignment;
+    const ageInfo = raceData.age;
+    const averageSize = raceData.size;
+    const sizeDescription = raceData.size_description;
+    // const startingProficiencies = raceData.starting_proficiencies;
+    // const numberOfProficienciesToPick =
+    //   raceData.starting_proficiencies_options.choose;
+    // const startingProficienciesOptions =
+    //   raceData.starting_proficiencies_options.from;
+    // const startingKnownLanguages = raceData.languages;
+    // const extraNumberOfLanguages = raceData.language_options.choose;
+    // const extraLanguagesOptions = raceData.language_options.from;
+    const languageDescription = raceData.language_desc;
+    // const traits = raceData.traits;
+    // const subRaces = raceData.subraces;
+
+    // // console.log("race data", JSON.stringify(raceData, null, 2));
+    console.log("index", index);
+    console.log("name", name);
+    console.log("speed", speed);
+    // console.log("abilityBonusesAttribute", abilityBonusesAttribute);
+    // console.log("abilityBonus", abilityBonus);
+    // console.log("numberOfChoices", numberOfChoices);
+    // console.log("abilityBonusOptions", abilityBonusOptions);
+    console.log("alignmentInfo", alignmentInfo);
+    console.log("ageInfo", ageInfo);
+    console.log("averageSize", averageSize);
+    console.log("sizeDescription", sizeDescription);
+    // console.log("startingProficiencies", startingProficiencies);
+    // console.log("numberOfProficienciesToPick", numberOfProficienciesToPick);
+    // console.log("startingProficienciesOptions", startingProficienciesOptions);
+    // console.log("startingKnownLanguages", startingKnownLanguages);
+    // console.log("extraNumberOfLanguages", extraNumberOfLanguages);
+    // console.log("extraLanguagesOptions", extraLanguagesOptions);
+    console.log("languageDescription", languageDescription);
+    // console.log("traits", traits);
+    // console.log("subRaces", subRaces);
+  }
+}

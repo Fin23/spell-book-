@@ -20,8 +20,7 @@ Molnar -
         creepy shop owner - old gnome 
 
 Jarson - 
-        camel tamer, kinda crazy, funny, cares about money
-
+        camel tamer, kinda crazy, funny, cares about monenoder
 Kewap - 
         a popular artist, currently helping create an immense floor mosaic piece at the entrance to the city 
 
@@ -35,8 +34,6 @@ Griff - smuggler in bedlum works for ... donavin
 Donavin - Lives in Bedlum, Head of one of the largest crime syndicates in Southern Mir-aq specializes in Human trafficking and drugs Boss of Griff distributes salt for Najee / Cranston trades Cranston young girls for salt, as well as gold, Specialized in forgeries, faking documents, passing chekc points, ID's Gold bricks were a payment from Gregoria for salt, 
 
 Azmodious
-
-
 
 Juni - Elderly maid
 
@@ -53,3 +50,20 @@ Drassis - merchant hired pascal to find missing daughter
 Girl - anzee - rescued from slave trade 
 
 Glirb 
+
+=============
+
+prison: 
+
+8ft tall gray elf like creature - Bransonite, 
+
+
+
+
+
+
+
+
+
+OL,L
+
