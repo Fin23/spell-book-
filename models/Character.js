@@ -56,6 +56,10 @@ const CharacterSchema = new mongoose.Schema({
   class: {
     type: String,
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 module.exports = mongoose.model("Character", CharacterSchema);

@@ -3,6 +3,7 @@ const router = express.Router();
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 const Story = require("../models/Story");
 const Purse = require("../models/Purse");
+const Character = require("../models/Character");
 //login landing page
 
 //passing ensureGuest and ensureAuth in as arguments in the function coming from middleware, ...passport
@@ -82,9 +83,13 @@ router.get("/character", ensureAuth, async (req, res) => {
     const stories = await Story.find({
       user: req.user.id,
     }).lean();
+
     const purse = await Purse.find({
       user: req.user.id,
     }).lean();
+    const character = await Character.find({
+      user: req.user.id,
+    });
     res.render("character.hbs", {
       layout: "character",
       name: req.user.firstName,
