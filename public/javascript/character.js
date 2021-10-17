@@ -12,6 +12,13 @@ document
 function myFunction() {
   document.getElementById("hiddenDiv").removeAttribute("hidden");
 }
+function hide() {
+  let hideLists = document.getElementsByClassName("stat1");
+  let hideStats = document.getElementsByClassName("hideStat1");
+
+  hideLists[0].remove();
+  hideStats[0].remove();
+}
 
 function hideMeClick() {
   if (hideMe === true) {
@@ -50,7 +57,7 @@ async function getRaces() {
       "'" +
       " onclick='pickRace(" +
       i +
-      ")' class='pickedRace' data-dismiss='modal'>" +
+      ")' class='pickedRace'>" +
       "<span>" +
       allRaces[i].index +
       "</span>" +
@@ -61,13 +68,24 @@ async function getRaces() {
 }
 
 async function pickRace(number) {
-  // let raceId;
+  if (number >= 0) {
+    statBlock = document.getElementById(number);
+
+    statBlock.insertAdjacentHTML(
+      "afterend",
+      "<div   id=stat" +
+        number +
+        " class='stat1'> TEST </div>" +
+        "<div class='hideStat1' style='border:solid white 1px;' onclick='hide()'> hide</div>"
+    );
+  }
   if (number === 0) {
     let raceId = "dragonborn";
-    console.log("number", number, raceId);
+    let statData = document.getElementById("stat" + number);
+    // console.log("number", number, raceId);
     const response = await fetch(`http://www.dnd5eapi.co/api/races/${raceId}`);
     const raceData = await response.json();
-    console.log("race data ", raceData);
+    // console.log("race data ", raceData);
     //////////////////////////////////////
     ///////////////////////////////////////
     // console.log("race data", JSON.stringify(raceData, null, 2));
@@ -77,42 +95,71 @@ async function pickRace(number) {
       console.log("abilitys == ", abilitys.ability_score.index, abilitys.bonus)
     );
     const age = raceData.age;
-    console.log("age == ", age);
+    // console.log("age == ", age);
     const alignmentInfo = raceData.alignment;
-    console.log("alignment == ", alignmentInfo);
+    // console.log("alignment == ", alignmentInfo);
     const index = raceData.index;
-    console.log("index ==", index);
+    // console.log("index ==", index);
     const languageDescription = raceData.language_desc;
-    console.log("language Description == ", languageDescription);
+    // console.log("language Description == ", languageDescription);
     const languages = raceData.languages;
     // console.log("languages == ", languages);
     languages.forEach((language) =>
       console.log("language == ", language.index)
     );
     const name = raceData.name;
-    console.log("name ==", name);
+    // console.log("name ==", name);
     const averageSize = raceData.size;
-    console.log("Size == ", averageSize);
+    // console.log("Size == ", averageSize);
     const sizeDescription = raceData.size_description;
-    console.log("size Description == ", sizeDescription);
+    // console.log("size Description == ", sizeDescription);
     const speed = raceData.speed;
-    console.log("speed == ", speed);
+    // console.log("speed == ", speed);
+
+    statData.innerHTML +=
+      "<div>" +
+      speed +
+      " </div>" +
+      "<div>" +
+      sizeDescription +
+      "</div>" +
+      "<div>" +
+      averageSize +
+      "</div>" +
+      "<div>" +
+      name +
+      "</div>" +
+      "<div>" +
+      languageDescription +
+      "</div>" +
+      "<div>" +
+      alignmentInfo +
+      "</div>" +
+      "<div>" +
+      age +
+      "</div>";
+
     const startingProficiencies = raceData.starting_proficiencies;
-    // console.log("starting Proficiencies == ", startingProficiencies);
-    startingProficiencies.forEach((startingProficiency) =>
-      console.log("starting Proficiency == ", startingProficiency.index)
+    console.log("starting Proficiencies == ", startingProficiencies.length);
+    startingProficiencies.forEach(
+      (startingProficiency) =>
+        (statData.innerHTML += "<div>" + startingProficiency.index + " </div>")
     );
+
     const subRaces = raceData.subraces;
-    // console.log("amount of sub Races == ", subRaces);
-    subRaces.forEach((subRace) => console.log("sub Race == ", subRace.index));
+    console.log("amount of sub Races == ", subRaces.length);
+    subRaces.forEach(
+      (subRace) => (statData.innerHTML += "<div>" + subRace.index + " </div>")
+    );
+
+    const traits = raceData.traits;
+    traits.forEach(
+      (trait) => (statData.innerHTML += "<div>" + trait.index + " </div>")
+    );
+
+    //////////////////////////////moment().format('YYYY/MM/DD')
     const traitsTotal = raceData.traits.length;
     console.log(" traits total == ", traitsTotal);
-    const traits = raceData.traits;
-    // console.log("traits == ", traits);
-    traits.forEach((trait) => console.log("trait == ", trait.index));
-    console.log(
-      "//=============================================================="
-    );
   }
   if (number === 1) {
     let raceId = "dwarf";
