@@ -1,10 +1,8 @@
-body {
-  /* background-image: url("../img/background.jpg"); The image used */
+/* body {
   margin-bottom: 15%;
-  /* height: 500px;  */
-  /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/images/cities/tallLibrary.jpg");
 }
@@ -13,38 +11,31 @@ body {
   background-image: url("/images/battleMaps/scrollBackground.jpg");
   opacity: 0.7;
   border-radius: 5px;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   border: solid #ac256f 10px;
-  /* padding: 20px; */
-  /* font-weight: 900; */
-  /* margin-left: 15%; */
-  /* margin-right: 15%; */
 }
 .scroll-box {
-  height: 400px; /* maximum height of the box, feel free to change this! */
+  height: 400px;
   overflow-y: scroll;
   margin-top: 15%;
   margin-left: 5%;
   margin-right: 15%;
-  /* padding-bottom: 15%; */
 }
 h1 {
   font-family: "Tangerine", cursive;
-  /* color: rgb(161, 54, 54); */
+
   color: white;
   text-align: center;
   font-size: 5em;
   font-weight: 900;
 }
 .deathThrows {
-  /* background-color: rgba(146, 219, 191, 0.5); */
   margin-bottom: 6px;
   padding: 10px;
 }
 .food {
-  /* background-color: rgba(146, 219, 191, 0.5); */
   margin-bottom: 6px;
   padding: 10px;
 }
@@ -117,4 +108,4 @@ h1 {
 .unconscious {
   margin-bottom: 6px;
   padding: 10px;
-}
+} */

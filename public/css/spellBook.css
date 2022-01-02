@@ -1,11 +1,10 @@
-body {
+/* body {
   background-color: rgb(146, 219, 191);
-  /* background-image: url("../img/background.jpg"); The image used */
 
   height: 100%;
-  /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/images/cities/capitalCityWaterFront.jpg");
 }
@@ -18,13 +17,11 @@ h1 {
 }
 .card {
   margin: 5%;
-  /* margin-top: 5%;
-  margin-left: 15%;
-  margin-right: 15%; */
+
   background-image: url("/images/battleMaps/scrollBackground.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   position: relative;
   display: -ms-flexbox;
   display: flex;
@@ -59,9 +56,9 @@ h1 {
 .modal-content,
 .modal {
   background-image: url("/images/battleMaps/scrollBackground.jpg");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   position: relative;
   display: -ms-flexbox;
@@ -72,8 +69,7 @@ h1 {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  /* border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem; */
+
   outline: 0;
 }
 .modal-body {
@@ -83,20 +79,16 @@ h1 {
   padding: 0rem;
 }
 .close {
-  /* float: right; */
   float: left;
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1;
   color: black;
   text-shadow: 0 1px 0 #fff;
-  /* background-color: green; */
+
   opacity: 1;
 }
 
-/* .bodyContainer{
-    margin-top:150px;
-} */
 .spellBookContainer {
   padding: 25px;
 }
@@ -107,11 +99,7 @@ h1 {
   }
 }
 
-#spellList {
-  /* border: 1px solid #ddd; */
-}
 #spellList li {
-  /* height:100%; */
   background: #ffe5e5;
   padding: 5px;
   margin-left: 35px;
@@ -161,39 +149,15 @@ button {
   background-image: url("/images/battleMaps/scrollBackground.jpg");
   opacity: 0.7;
   border-radius: 6px;
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  /* font-family: "Tangerine", cursive; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: black;
-  /* text-align: center; */
-  /* background-color: rgb(146, 219, 191); */
-  /* font-size: 2em; */
-  /* font-weight: 700; */
 }
-
-/* ================== nav bar ====================*/
-
-/*.navbar-dark .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, 0.75);
-    letter-spacing: 1px;
-    font-size: 0.95rem;
-}*/
-
-/*.navbar {
-    background-color: #a4e0a900 !important; /*Dark: 1a1a1a00
-    transition: all .7s;
-    border-radius: 11px;
-     padding-left: 10px; 
-}
-*/
 
 .navbar-nav .dropdown-menu {
-  /*position: static;
-    float: none;*/
-  /*background-color: azure;*/
   background-color: rgba(195, 163, 222, 0.93);
-  /*color: #ffffffee;*/
 }
 
 .dropdown-menu {
@@ -204,5 +168,4 @@ button {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #007bff;
-  /*background-color: rgb(146, 219, 191);*/
-}
+} */

@@ -1,13 +1,10 @@
 body {
-  /* margin: 0;
-  height: 100vh; */
-  /* display: flex; */
+
   display: block;
   align-items: center;
   justify-content: center;
   background-color: #333;
-  /* background-color: black; */
-  /* color: #fff; */
+
   color: #03a062;
   font-family: "Matrix", sans-serif;
 }
@@ -24,8 +21,7 @@ body {
   margin-left: 20px;
 }
 .stat1 {
-  /* width: 200px;
-  height: 200px; */
+
   font-family: "Matrix", sans-serif;
 }
 .grab {
@@ -35,9 +31,7 @@ body {
   flex-direction: row;
 }
 
-/* .raceBtn {
-  flex-direction: row;
-} */
+
 ul {
   padding: 0;
   list-style-type: none;

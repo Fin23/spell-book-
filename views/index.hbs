@@ -1,5 +1,5 @@
 ﻿<div class="bodyContainer">
-  <!--boot strap card -->
+
   <h1>
     Spell Book
   </h1>
@@ -8,8 +8,6 @@
       <p><b>Spell Name:</b> <span id="fetchData"></span></p>
     </div>
     <div class="card-body">
-
-
 
       <p><b>Level: </b><span id="fetchData5"></span></p>
       <p><b>Material Needed: </b><span id="fetchData6"></span></p>
@@ -20,39 +18,43 @@
       <p><b> Spell Summary: </b><span id="fetchData11"></span></p>
       <p><b> Higher Level: </b><span id="fetchData12"></span></p>
 
-      <button onclick="myFunction()" type="button" class="btn btn-primary" data-toggle="modal"
-        data-target="#exampleModalLong">
+      <button
+        onclick="myFunction()"
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModalLong"
+      >
         spell List
       </button>
 
     </div>
     <div class="card-footer text-muted"></div>
   </div>
-  <!--end of boot strap card-->
 
   <div class="spellBookContainer">
 
-
-    <!-- <h3>Spell Finder</h3> -->
     <form hidden class="form" id="spellForm">
       <input type="text" id="spellInput" placeholder="spell-name" />
-      <!-- <input type="submit" id="spellSubmit" onclick="spellSearch()" /> -->
+
     </form>
     <br />
-    <!-- <button onclick="spellB()">cast spell</button> -->
-    <!-- Button trigger modal -->
+
   </div>
-  <!-- Modal -->
 
-  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
-    aria-hidden="true">
+  <div
+    class="modal fade"
+    id="exampleModalLong"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true"
+  >
     <div class="modal-dialog" role="document">
-
 
       <div id="modalSpellList" class="modal-body" hidden>
 
         <div class="modal-content">
-
 
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Close
@@ -63,15 +65,12 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Close
           </button>
-          <!-- ... -->
-        </div>
-        {{!-- <div class="modal-footer"> --}}
 
+        </div>
 
         <script>
           function myFunction() {
-            document.getElementById("modalSpellList").removeAttribute("hidden");
-          }
+          document.getElementById("modalSpellList").removeAttribute("hidden"); }
         </script>
 
       </div>
@@ -91,17 +90,17 @@
       Actions you can take instead of attacking or moving:
     </h2>
     <span>
-      Dash, Help (give someone advantage on a Check or Attack), Hide,
-      Search, Grapple, Disengage, Use Object, Ready action, Shove, Dodge,
-      Escape, Spell, Improv
+      Dash, Help (give someone advantage on a Check or Attack), Hide, Search,
+      Grapple, Disengage, Use Object, Ready action, Shove, Dodge, Escape, Spell,
+      Improv
     </span>
     <h2>
       Hide specifics:
     </h2>
     <p>
       if in combat you must disengage first, if enemy is looking for you do
-      Stealth v enemy perception roll, if enemy is not looking Stealth v
-      Passive perception
+      Stealth v enemy perception roll, if enemy is not looking Stealth v Passive
+      perception
     </p>
 
     <h2>
@@ -127,9 +126,8 @@
       Spell casting attack rolls:
     </h2>
     <span>
-      d20 + spell-casting ability modifier + proficiency bonus (Wizard-Int
-      || Clerics, Druids, Rangers-Wis || Bards, Paladins, Sorcerers,
-      Warlocks-Char)
+      d20 + spell-casting ability modifier + proficiency bonus (Wizard-Int ||
+      Clerics, Druids, Rangers-Wis || Bards, Paladins, Sorcerers, Warlocks-Char)
     </span>
 
     <h2>
@@ -143,17 +141,20 @@
       Cover
     </h2>
     <span>
-      <b> 1/2 cover</b> = +2 AC and DEX saving throws / <b> 3/4 cover </b>=
-      +5 AC and DEX saving throws / <b> Total cover</b> = can't be directly
-      targeted with spells or attacks
+      <b> 1/2 cover</b>
+      = +2 AC and DEX saving throws /
+      <b> 3/4 cover </b>= +5 AC and DEX saving throws /
+      <b> Total cover</b>
+      = can't be directly targeted with spells or attacks
     </span>
     <h2>
       RESTING
     </h2>
     <span>
-      <b> Short</b> = at least 1hr, use hit dice to regain lost hit points /
-      <b> Long </b>= 8hrs regain all hit points all spell slots and up to
-      half of your health hit dice
+      <b> Short</b>
+      = at least 1hr, use hit dice to regain lost hit points /
+      <b> Long </b>= 8hrs regain all hit points all spell slots and up to half
+      of your health hit dice
     </span>
     <h2></h2>
     <span> </span>

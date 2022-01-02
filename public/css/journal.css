@@ -1,47 +1,38 @@
-body {
+/* body {
   background-color: rgb(146, 219, 191);
-  /* background-image: url("../img/background.jpg"); The image used */
-
-  height: 500px; /* You must set a specified height */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 h1 {
   text-align: center;
 }
 .journalContainer {
-  /* height: 1200px; */
   width: 100%;
   height: auto;
   padding: 35px;
-
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("../images/cities/zoomedOutCapitalCity.jpg");
 }
 img {
-  /* height: 1200px; */
   width: 100%;
   height: auto;
-  /* padding: 15px; */
-  /* margin: 2%; */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  /* background-image: url(../images/cities/RenderedImage.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .scrollBack {
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("../images/battleMaps/scrollBackground.jpg");
   opacity: 0.7;
   color: black;
 }
 p {
-  /* background-color: rgba(146, 219, 191, 0.5); */
   padding: 15px;
   font-size: 18px;
   font-weight: 900;
@@ -51,7 +42,6 @@ p {
 }
 h1 {
   font-family: "Tangerine", cursive;
-  /* color: rgb(187, 30, 30); */
   color: white;
   text-align: center;
   font-size: 5em;
@@ -59,17 +49,9 @@ h1 {
 }
 
 .scroll-box {
-  height: 400px; /* maximum height of the box, feel free to change this! */
+  height: 400px;
   overflow-y: scroll;
   margin-top: 15%;
   margin-left: 5%;
   margin-right: 5%;
-  /* padding-bottom: 15%; */
-}
-/* .scroll-box {
-  background: #f4f4f4;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  height: 400px;  maximum height of the box, feel free to change this! 
-  padding: 15px;
-  overflow-y: scroll;
 } */

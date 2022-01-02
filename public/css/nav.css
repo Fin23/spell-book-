@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -13,15 +13,15 @@ nav {
   font-family: "Tangerine", cursive;
 }
 #navbar {
-  /* overflow: hidden; */
+
   z-index: 1000;
-  /* background-color: #333; */
+
 
 }
 .logo {
   color: rgb(226, 226, 226);
 
-  /* letter-spacing: 5px; */
+  
   font-size: 40px;
 }
 .nav-links {
@@ -95,8 +95,8 @@ nav {
     opacity: 1;
     transform: translateX(0px);
   }
-}
-
+} */
+/* 
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -105,7 +105,7 @@ nav {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
-}
+} */
 /* Page content */
 /* .content {
   padding: 16px;
