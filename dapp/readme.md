@@ -1,0 +1,1 @@
+smart contact written with solidity, solidity is a type languare, type script, must be compiled to run, 

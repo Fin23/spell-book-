@@ -28,7 +28,9 @@
 />
 <div class="py-4 grid gap-4 md:grid-cols-2 grid-cols-1">
 	{#each filteredPokemon as pokeman}
+
 		<PokemanCard pokemancard={pokeman} />
+
 	{/each}
 </div>
 

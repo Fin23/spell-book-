@@ -5,8 +5,13 @@
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a class="hover:bg-violet-500" hover:m-6 href="/entergame/id
+		" >
+		<span class="flex flex-row">
+
+			<img  src={logo} alt="SvelteKit" />
+			<div class="opacity-0 hover:opacity-100  absolute  ml-10  text-4xl text-black font-semibold ">Rosco</div>
+		</span>
 		</a>
 	</div>
 
@@ -15,7 +20,7 @@
 			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
 		</svg>
 		<ul>
-			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
+			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Pokedex</a></li>
 
 			<li class:active={$page.path === '/spellbook'}>
 				<a sveltekit:prefetch href="/spellbook">Spell Boook</a>
